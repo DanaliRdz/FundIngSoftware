@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="ConsultorioDental.IngSoftware.Views.EditarCitaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ConsultorioDental.IngSoftware.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="AliceBlue">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="✏️ Editar Cita" FontSize="45" FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center" Margin="0,0,0,20"></TextBlock>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="10">
+            <TextBlock Text="Nombre del Paciente:" FontWeight="SemiBold" Foreground="#555" FontSize="22" ></TextBlock>
+            <TextBox Height="35" Background="White" BorderBrush="Blue" BorderThickness="2" FontSize="22"></TextBox>
+
+            <TextBlock Text="Fecha de la cita:" FontWeight="SemiBold" Foreground="#555" FontSize="22"></TextBlock>
+            <DatePicker Height="35" BorderBrush="blue" BorderThickness="2" FontSize="22" ></DatePicker>
+
+            <TextBlock Text="Servicio a realizar:" FontWeight="SemiBold" Foreground="#555" FontSize="22"></TextBlock>
+            <ComboBox Height="35" Background="White" BorderBrush="blue" BorderThickness="2" FontSize="22">
+                <ComboBoxItem Content="Limpieza"></ComboBoxItem>
+                <ComboBoxItem Content="Aplicacion de ortodoncia"></ComboBoxItem>
+                <ComboBoxItem Content="Chequeo rutinario"></ComboBoxItem>
+            </ComboBox>
+
+            <TextBlock Margin="0,20,0,0" Foreground="Red" FontStyle="Italic" HorizontalAlignment="Center" TextAlignment="Center" FontSize="19"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0">
+            <Button Content="💾 Guardar" Width="120" Height="40" Background="#1E90FF" Foreground="White" FontWeight="Bold" Margin="5"></Button>
+            <Button Content="❌ Cancelar" Width="120" Height="40" Background="#FF4C4C" Foreground="White" FontWeight="Bold" Margin="5"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
